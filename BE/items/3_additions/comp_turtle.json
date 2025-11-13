@@ -1,0 +1,20 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "complement:turtle",
+            "menu_category": {
+              "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:icon": {
+                "texture": "complement_turtle"
+            },
+            "minecraft:display_name": {
+                "value": "精妙背包插件\n§r§7特殊功能: §9水下呼吸"
+            }
+        }
+    }
+}

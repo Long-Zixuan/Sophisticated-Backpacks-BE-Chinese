@@ -1,0 +1,1221 @@
+{
+    "pause_screen_content": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "button_menu@pause.backpack_credits_tab": {
+                            "layer": 40
+                        }
+                    },
+                    {
+                        "input_panel_menu_not_interact": {
+                            "bindings": [
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "bp_tuto_layout",
+                                    "source_property_name": "#toggle_state",
+                                    "target_property_name": "#visible"
+                                }
+                            ],
+                            "layer": 30,
+                            "type": "input_panel",
+                            "size": [
+                                "100%",
+                                "100%"
+                            ],
+                            "controls": [
+                                {
+                                    "image_background_menu_button_open": {
+                                        "type": "image",
+                                        "size": [
+                                            "100%",
+                                            "100%"
+                                        ],
+                                        "texture": "textures/ui/Black",
+                                        "alpha": 0.8,
+                                        "controls": [
+                                            {
+                                                "menu_backpack_tutorial@pause.panel_tutorial_menu_backpacks": {}
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "top_tab_pe@pause.top_tab": {
+        "$toggle_name": "layout_toggle_bp",
+        "$unchecked_default_image": "textures/ui/pause/default",
+        "$unchecked_hover_image": "textures/ui/pause/hover",
+        "$unchecked_locked_image": "textures/ui/pause/default",
+        "$unchecked_locked_hover_image": "textures/ui/pause/default",
+        "$checked_default_image": "textures/ui/pause/default_pressed",
+        "$checked_hover_image": "textures/ui/pause/hover_pressed",
+        "$checked_locked_image": "textures/ui/pause/default_pressed",
+        "$checked_locked_hover_image": "textures/ui/pause/default_pressed"
+    },
+    "backpack_credits_tab@pause.top_tab_pe": {
+        "size": [
+            25,
+            25
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "offset": [
+            5,
+            5
+        ],
+        "$tab_view_binding_name": "bp_tuto_layout"
+    },
+    "button_open_menu_tutorial": {
+        "type": "image",
+        "size": [
+            25,
+            25
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "offset": [
+            5,
+            5
+        ],
+        "texture": "textures/bp/backpack_netherite"
+    },
+    "title_menu_label": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "offset": [
+            -20,
+            6
+        ],
+        "size": [
+            "100%",
+            10
+        ],
+        "controls": [
+            {
+                "text_1@pause.menu_text_bp": {
+                    "$tab_layout_toggle": "bp_craft_layout",
+                    "text": "背包合成表"
+                }
+            },
+            {
+                "text_2@pause.menu_text_bp": {
+                    "$tab_layout_toggle": "bp_disc_layout_ui",
+                    "text": "关于音乐唱片背包"
+                }
+            },
+            {
+                "text_3@pause.menu_text_bp": {
+                    "offset": [
+                        18,
+                        0
+                    ],
+                    "$tab_layout_toggle": "bp_credits_layout",
+                    "text_alignment": "center",
+                    "text": "作者有话说"
+                }
+            }
+        ]
+    },
+    "menu_text_bp": {
+        "type": "label",
+        "size": [
+            "100%",
+            10
+        ],
+        "font_type": "MinecraftTen",
+        "text_alignment": "right",
+        "color": "$title_text_color",
+        "layer": 2,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$tab_layout_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "top_tab_bp_tabs@pause.top_tab": {
+        "$toggle_group_default_selected": 0,
+        "$tab_content": "pause.empty_tab_panel",
+        "$radio_toggle_group": true,
+        "$toggle_name": "layout_toggle_backpack"
+    },
+    "bp_craft_layout_tab@pause.top_tab_bp_tabs": {
+        "$is_lelft_most_tab": true,
+        "$tab_view_binding_name": "bp_craft_layout",
+        "$tab_icon": "pause.backpack_icon",
+        "$toggle_group_forced_index": 0
+    },
+    "bp_disc_layout_tab@pause.top_tab_bp_tabs": {
+        "$tab_view_binding_name": "bp_disc_layout_ui",
+        "$tab_icon": "pause.disc_bp_icon",
+        "$toggle_group_forced_index": 1
+    },
+    "bp_credits_layout_tab@pause.top_tab_bp_tabs": {
+        "$tab_view_binding_name": "bp_credits_layout",
+        "$tab_icon": "pause.comp_bp_icon",
+        "$toggle_group_forced_index": 2
+    },
+    "backpack_icon@pause.icon_image": {
+        "$size_icon": [
+            16,
+            16
+        ],
+        "texture": "textures/bp/backpack_leather"
+    },
+    "disc_bp_icon@pause.icon_image": {
+        "texture": "textures/items/disc_backpack"
+    },
+    "comp_bp_icon@pause.icon_image": {
+        "$size_icon": [
+            18,
+            18
+        ],
+        "texture": "textures/ui/credits_button_icon"
+    },
+    "icon_image": {
+        "layer": 1,
+        "type": "image",
+        "size": "$size_icon",
+        "$size_icon|default": [
+            17,
+            17
+        ]
+    },
+    "stackpanel_grid_backpacks_tabs": {
+        "type": "input_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "backpacks@pause.scroll_grid_backpacks": {}
+            }
+        ]
+    },
+    "scroll_grid_backpacks": {
+        "type": "grid",
+        "grid_dimensions": [
+            7,
+            3
+        ],
+        "size": [
+            "100%",
+            "14%c + 2px"
+        ],
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "controls": [
+            {
+                "papasoteasd@pause.button_bp_leather": {
+                    "grid_position": [
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "ajsnbvdhjgas@pause.button_bp_copper": {
+                    "grid_position": [
+                        1,
+                        0
+                    ]
+                }
+            },
+            {
+                "papasotfsfe@pause.button_bp_iron": {
+                    "grid_position": [
+                        2,
+                        0
+                    ]
+                }
+            },
+            {
+                "papasotashdfe@pause.button_bp_gold": {
+                    "grid_position": [
+                        3,
+                        0
+                    ]
+                }
+            },
+            {
+                "papasdfsote@pause.button_bp_diamond": {
+                    "grid_position": [
+                        4,
+                        0
+                    ]
+                }
+            },
+            {
+                "papagsdgsote@pause.button_bp_nether": {
+                    "grid_position": [
+                        5,
+                        0
+                    ]
+                }
+            },
+            {
+                "itesdgmsa@pause.button_c_1": {
+                    "grid_position": [
+                        6,
+                        0
+                    ]
+                }
+            },
+            {
+                "itesdgms@pause.button_c_2": {
+                    "grid_position": [
+                        0,
+                        1
+                    ]
+                }
+            },
+            {
+                "itemfdgs@pause.button_c_3": {
+                    "grid_position": [
+                        1,
+                        1
+                    ]
+                }
+            },
+            {
+                "itedafgms@pause.button_c_4": {
+                    "grid_position": [
+                        2,
+                        1
+                    ]
+                }
+            },
+            {
+                "itegfdms@pause.button_c_5": {
+                    "grid_position": [
+                        3,
+                        1
+                    ]
+                }
+            },
+            {
+                "itsdfgems@pause.button_c_6": {
+                    "grid_position": [
+                        4,
+                        1
+                    ]
+                }
+            },
+            {
+                "dfgitems@pause.button_c_7": {
+                    "grid_position": [
+                        5,
+                        1
+                    ]
+                }
+            },
+            {
+                "itemgggs@pause.button_c_8": {
+                    "grid_position": [
+                        6,
+                        1
+                    ]
+                }
+            },
+            {
+                "itedfgms@pause.button_c_9": {
+                    "grid_position": [
+                        0,
+                        2
+                    ]
+                }
+            },
+            {
+                "itemdfgdfs@pause.button_c_10": {
+                    "grid_position": [
+                        1,
+                        2
+                    ]
+                }
+            },
+            {
+                "itedfgdms@pause.button_c_11": {
+                    "grid_position": [
+                        2,
+                        2
+                    ]
+                }
+            },
+            {
+                "itemafgds@pause.button_c_12": {
+                    "grid_position": [
+                        3,
+                        2
+                    ]
+                }
+            },
+            {
+                "itsfdgems@pause.button_c_13": {
+                    "grid_position": [
+                        4,
+                        2
+                    ]
+                }
+            },
+            {
+                "itesdfgdfms@pause.button_c_14": {
+                    "grid_position": [
+                        5,
+                        2
+                    ]
+                }
+            },
+            {
+                "itesdfgdfmssssssssssss@pause.button_c_15": {
+                    "grid_position": [
+                        6,
+                        2
+                    ]
+                }
+            }
+        ]
+    },
+    "items_bp_toggle_button@common_tabs.tab_top": {
+        "layer": 60,
+        "alpha": 0.2,
+        "size": [
+            "14%",
+            "100%x"
+        ],
+        "$anims|default": [],
+        "anims": "$anims",
+        "$offset|default": [
+            0,
+            0
+        ],
+        "offset": "$offset",
+        "$radio_toggle_group": true,
+        "$toggle_focus_enabled": false,
+        "$toggle_name": "backpack_navigation_tab_items",
+        "$tab_content": "pause.empty_tab_panel",
+        "$tab_icon": "pause.bp_icon_item",
+        "$allow_controller_back_button_mapping": "$is_ps4",
+        "$toggle_group_forced_index": "$forced_index_bp",
+        "$tab_view_binding_name": "$tab_binding_name",
+        "$unchecked_default_image": "textures/ui/cell_image_normal",
+        "$unchecked_hover_image": "textures/ui/recipe_book_touch_cell_selected",
+        "$unchecked_locked_image": "textures/ui/cell_image_normal",
+        "$unchecked_locked_hover_image": "textures/ui/cell_image_normal",
+        "$checked_default_image": "textures/ui/cell_image_normal",
+        "$checked_hover_image": "textures/ui/recipe_book_touch_cell_selected",
+        "$checked_locked_image": "textures/ui/cell_image_normal",
+        "$checked_locked_hover_image": "textures/ui/cell_image_normal"
+    },
+    "button_bp_leather@pause.items_bp_toggle_button": {
+        "$t_item_b": "bp/backpack_leather",
+        "$tab_binding_name": "bp_leather",
+        "$forced_index_bp": 1
+    },
+    "button_bp_copper@pause.items_bp_toggle_button": {
+        "$t_item_b": "bp/backpack_copper",
+        "$tab_binding_name": "bp_copper",
+        "$forced_index_bp": 2
+    },
+    "button_bp_iron@pause.items_bp_toggle_button": {
+        "$t_item_b": "bp/backpack_iron",
+        "$tab_binding_name": "bp_iron",
+        "$forced_index_bp": 3
+    },
+    "button_bp_gold@pause.items_bp_toggle_button": {
+        "$t_item_b": "bp/backpack_gold",
+        "$tab_binding_name": "bp_gold",
+        "$forced_index_bp": 4
+    },
+    "button_bp_diamond@pause.items_bp_toggle_button": {
+        "$t_item_b": "bp/backpack_diamond",
+        "$tab_binding_name": "bp_diamond",
+        "$forced_index_bp": 5
+    },
+    "button_bp_nether@pause.items_bp_toggle_button": {
+        "$t_item_b": "bp/backpack_netherite",
+        "$tab_binding_name": "bp_nether",
+        "$forced_index_bp": 6
+    },
+    "button_c_1@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/base_complement",
+        "$tab_binding_name": "i_1",
+        "$forced_index_bp": 7
+    },
+    "button_c_2@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/turtle_complement",
+        "$tab_binding_name": "i_2",
+        "$forced_index_bp": 8
+    },
+    "button_c_3@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/transfer_complement",
+        "$tab_binding_name": "i_3",
+        "$forced_index_bp": 9
+    },
+    "button_c_4@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/torch_complement",
+        "$tab_binding_name": "i_4",
+        "$forced_index_bp": 10
+    },
+    "button_c_5@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/mining_complement",
+        "$tab_binding_name": "i_5",
+        "$forced_index_bp": 11
+    },
+    "button_c_6@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/magnet_complement",
+        "$tab_binding_name": "i_6",
+        "$forced_index_bp": 12
+    },
+    "button_c_7@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/magnet_complement_2",
+        "$tab_binding_name": "i_7",
+        "$forced_index_bp": 13
+    },
+    "button_c_8@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/axe_complement",
+        "$tab_binding_name": "i_8",
+        "$forced_index_bp": 14
+    },
+    "button_c_9@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/farming_complement",
+        "$tab_binding_name": "i_9",
+        "$forced_index_bp": 15
+    },
+    "button_c_10@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/food_complement",
+        "$tab_binding_name": "i_10",
+        "$forced_index_bp": 16
+    },
+    "button_c_11@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/furnace_complement",
+        "$tab_binding_name": "i_11",
+        "$forced_index_bp": 17
+    },
+    "button_c_12@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/furnace_complement_v2",
+        "$tab_binding_name": "i_12",
+        "$forced_index_bp": 18
+    },
+    "button_c_13@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/apple_complement",
+        "$tab_binding_name": "i_13",
+        "$forced_index_bp": 19
+    },
+    "button_c_14@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/music_complement",
+        "$tab_binding_name": "i_14",
+        "$forced_index_bp": 20
+    },
+    "button_c_15@pause.items_bp_toggle_button": {
+        "$t_item_b": "items/liquid_complement",
+        "$tab_binding_name": "i_15",
+        "$forced_index_bp": 21
+    },
+    "bp_icon_item@pause.icon_image": {
+        "texture": "('textures/' + $t_item_b)",
+        "$size_icon": [
+            "100%",
+            "100%"
+        ]
+    },
+    "scroll_panel@common.container_scroll_panel": {},
+    "credits_grid_backpacks_tabs": {
+        "type": "input_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "credits_panel_backpack_project@pause.credits_guide": {}
+            }
+        ]
+    },
+    "credits_guide": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "orientation": "vertical",
+        "controls": [
+            {
+                "credits_panel": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
+                    "controls": [
+                        {
+                            "credits_title": {
+                                "type": "label",
+                                "offset": [
+                                    0,
+                                    4
+                                ],
+                                "text_alignment": "center",
+                                "font_type": "MinecraftTen",
+                                "text": "大家好!",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "size": [
+                                    "60%",
+                                    "30%x"
+                                ],
+                                "layer": 9
+                            }
+                        },
+                        {
+                            "credits_text": {
+                                "type": "label",
+                                "shadow": true,
+                                "font_scale_factor": 0.8,
+                                "offset": [
+                                    0,
+                                    18
+                                ],
+                                "font_type": "smooth",
+                                "max_size": [
+                                    "70%",
+                                    600
+                                ],
+                                "text": "我想花一点时间来表达我最诚挚的感谢，感谢所有参与这个小而重要的Minecraft Bedrock背包项目的人。由于你们的努力和奉献，我们能够引入新的附加组件和功能，扩展Bedrock版本的特性目录，为玩家提供更多的选项和创意解决方案。\n\n这个项目不仅专注于添加新功能，还解决了游戏中一个最常见的问题：背包空间不足。通过这些改进，我们希望让每个人的游戏体验更加流畅和愉快。\n\n§g公开鸣谢：§r\n- 拥有者 | Angeldfire2\n- Developer7452\n- SenyuGamer\n- Manolo394\n\n- ! TheKarTex\n- *St4r crack*\n- crissafio el mismísimo\n- JebusArt\n- Obed Millán\n- SirDrogas\n\n§g灵感：§r\n这个项目受到了Sophisticated Backpack - Java Edition的启发。我们特别感谢§d@P3pp3rF1y§r，Sophisticated Backpacks的创作者，感谢他允许我们发布这个项目，这基本上是他精彩创意的适应移植。他在Java版的工作是点燃我们为Bedrock版本创造这个项目的火花，我们很高兴能与社区分享。\n\n§g额外感谢：§r\n我要感谢我的Discord社区（Angel's Community），感谢你们等待了这么久，抱歉让你们等了这么久XD\n敬上：§cAngeldfire2§r\n\n§a感谢大家的支持与合作！!\n\n§c§l也别忘了*承挨汉化*和*LoongLy*啊",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "layer": 9
+                            }
+                        },
+                        {
+                            "emojis_backpacks": {
+                                "type": "label",
+                                "text": "   ",
+                                "font_scale_factor": 2,
+                                "text_alignment": "center",
+                                "offset": [
+                                    0,
+                                    -14
+                                ],
+                                "anchor_from": "bottom_middle",
+                                "anchor_to": "bottom_middle"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "inputpanel_grid_backpacks_tabs": {
+        "type": "input_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "backpack_music@pause.disc_guide": {}
+            }
+        ]
+    },
+    "disc_guide": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "orientation": "vertical",
+        "controls": [
+            {
+                "banner_panel": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "60%x"
+                    ],
+                    "controls": [
+                        {
+                            "banner": {
+                                "type": "image",
+                                "texture": "textures/ui/banner_mobs_bp",
+                                "size": [
+                                    "90%",
+                                    "90%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "text_guide_disc_panel": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        100
+                    ],
+                    "controls": [
+                        {
+                            "text_guide_disc": {
+                                "type": "label",
+                                "shadow": true,
+                                "max_size": [
+                                    "98%",
+                                    "100%"
+                                ],
+                                "font_scale_factor": 0.8,
+                                "text": "音乐磁带可以通过击败特定的生物获得，例如僵尸、骷髅和爬行者。在与这些敌人对抗时，有可能他们会在被击败时掉落音乐磁带，尽管这并不是保证一定的。这种稀有性使得获取它们成为额外的挑战和令人满意的成就。\n\n为了在移动时播放这些磁带，你需要制作一个名为“便携式唱片机”的重要插件。这个附加组件将允许你在任何地方享受你最喜欢的音乐，为你的冒险增添一层个性化和娱乐性。.",
+                                "text_alignment": "center",
+                                "font_type": "smooth"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "background_tutorial_menu_backpacks": {
+        "type": "image",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "texture": "textures/ui/Black",
+        "controls": [
+            {
+                "background_backpacks": {
+                    "type": "image",
+                    "size": [
+                        "92%",
+                        "92%"
+                    ],
+                    "offset": [
+                        0,
+                        6
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "alpha": 0.4,
+                    "texture": "textures/sophisticangel_backpack"
+                }
+            },
+            {
+                "craftings_panel_representation": {
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bp_craft_layout",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "type": "image",
+                    "size": [
+                        "50%",
+                        "100%"
+                    ],
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "texture": "textures/ui/crafters/dialog_background_opaque",
+                    "controls": [
+                        {
+                            "crafting_panel@pause.panel_crafters_image_backpack": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "grid_items_bp_panel": {
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bp_craft_layout",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "type": "panel",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": [
+                        6,
+                        7
+                    ],
+                    "size": [
+                        "50% - 4px",
+                        "100% - 26px"
+                    ],
+                    "controls": [
+                        {
+                            "recipe_book_scroll_backpacks@pause.scroll_panel": {
+                                "$scrolling_content": "pause.stackpanel_grid_backpacks_tabs"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "credits_bp_panel": {
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bp_credits_layout",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "type": "panel",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": [
+                        5,
+                        7
+                    ],
+                    "size": [
+                        "100% - 5px",
+                        "100% - 26px"
+                    ],
+                    "controls": [
+                        {
+                            "credits_scroll_backpacks@pause.scroll_panel": {
+                                "$scrolling_content": "pause.credits_grid_backpacks_tabs"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "discos_bp_panel": {
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bp_disc_layout_ui",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "type": "panel",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": [
+                        5,
+                        7
+                    ],
+                    "size": [
+                        "100% - 5px",
+                        "100% - 26px"
+                    ],
+                    "controls": [
+                        {
+                            "discos_scroll_backpacks@pause.scroll_panel": {
+                                "$scrolling_content": "pause.inputpanel_grid_backpacks_tabs"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "panel_tutorial_menu_backpacks_border": {
+                    "type": "image",
+                    "size": [
+                        "100% + 4px",
+                        "100% + 4px"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "texture": "textures/ui/dialog_background_hollow_3",
+                    "controls": [
+                        {
+                            "title_menu_label@pause.title_menu_label": {}
+                        },
+                        {
+                            "buttons_stackpanel_tabs_bp": {
+                                "layer": 40,
+                                "type": "stack_panel",
+                                "anchor_from": "top_left",
+                                "anchor_to": "top_left",
+                                "offset": [
+                                    0,
+                                    -22
+                                ],
+                                "size": [
+                                    "100%c",
+                                    26
+                                ],
+                                "orientation": "horizontal",
+                                "controls": [
+                                    {
+                                        "button_1": {
+                                            "type": "panel",
+                                            "$is_left_most_tab": true,
+                                            "size": [
+                                                25,
+                                                "100%"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "bp_craft_layout_tab_factory@pause.bp_craft_layout_tab": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "button_2": {
+                                            "type": "panel",
+                                            "size": [
+                                                25,
+                                                "100%"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "bp_disc_layout_tab_factory@pause.bp_disc_layout_tab": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "padding_0": {
+                                            "type": "panel",
+                                            "size": [
+                                                15,
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "button_3": {
+                                            "type": "panel",
+                                            "size": [
+                                                25,
+                                                "100%"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "bp_credits_layout_tab_factory@pause.bp_credits_layout_tab": {}
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "panel_tutorial_menu_backpacks": {
+        "type": "input_panel",
+        "size": [
+            "100%y + 62%y",
+            "50%"
+        ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "layer": 90,
+        "controls": [
+            {
+                "background_content_tutorial_ui@pause.background_tutorial_menu_backpacks": {}
+            }
+        ]
+    },
+    "top_tab@common_tabs.tab_top": {
+        "alpha": 0.2,
+        "$anims|default": [],
+        "anims": "$anims",
+        "$offset|default": [
+            0,
+            0
+        ],
+        "offset": "$offset",
+        "$toggle_focus_enabled": false,
+        "$allow_controller_back_button_mapping": "$is_ps4"
+    },
+    "empty_tab_panel": {
+        "type": "panel",
+        "size": [
+            "100% + 1.5px",
+            "100%x + 1px"
+        ],
+        "controls": [
+            {
+                "img@$tab_icon": {}
+            }
+        ]
+    },
+    "hover_item_crafting": {
+        "type": "button",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 2,
+        "hover_control": "hover",
+        "$is_backpack_item|default": false,
+        "$is_aditament_item|default": false,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$layout_item_button",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "hover@pause.text_item_selected_backpack": {}
+            },
+            {
+                "image_crafting": {
+                    "type": "image",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "texture": "$texture_item_slot",
+                    "variables": [
+                        {
+                            "requires": "$is_backpack_item",
+                            "$texture_item_slot": "('textures/ui/crafters/backpacks/num_' + $crafting_bp_num)"
+                        },
+                        {
+                            "requires": "$is_aditament_item",
+                            "$texture_item_slot": "('textures/ui/crafters/aditaments/num_' + $crafting_bp_num)"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "text_item_selected_backpack": {
+        "type": "image",
+        "texture": "textures/ui/purpleBorder",
+        "size": [
+            "100%c + 8px",
+            "100%c + 8px"
+        ],
+        "layer": 4,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "offset": [
+            0,
+            "90%"
+        ],
+        "controls": [
+            {
+                "text_item": {
+                    "type": "label",
+                    "text": "$hover_text_item",
+                    "layer": 1,
+                    "color": "$item_hover_text_color"
+                }
+            }
+        ]
+    },
+    "panel_crafters_image_backpack": {
+        "type": "panel",
+        "layer": 9,
+        "size": [
+            "80%",
+            "60%x"
+        ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "default@pause.default_image_crafteos": {}
+            },
+            {
+                "bp_1@pause.hover_item_crafting": {
+                    "$hover_text_item": "Backpack leather",
+                    "$layout_item_button": "bp_leather",
+                    "$crafting_bp_num": "1",
+                    "$is_backpack_item": true
+                }
+            },
+            {
+                "bp_122222@pause.hover_item_crafting": {
+                    "$hover_text_item": "铜质背包\n§c小心！\n在合成更高级背包之前，\n你必须先取出背包里的物品，\n否则你可能会失去里面的所有物品！",
+                    "$layout_item_button": "bp_copper",
+                    "$crafting_bp_num": "2",
+                    "$is_backpack_item": true
+                }
+            },
+            {
+                "bp_133333@pause.hover_item_crafting": {
+                    "$hover_text_item": "金质背包\n§c小心！\n在合成更高级背包之前，\n你必须先取出背包里的物品，\n否则你可能会失去你的物品。",
+                    "$layout_item_button": "bp_gold",
+                    "$crafting_bp_num": "4",
+                    "$is_backpack_item": true
+                }
+            },
+            {
+                "bp_2@pause.hover_item_crafting": {
+                    "$hover_text_item": "铁质背包\n§c小心！\n在合成更高级背包之前，\n你必须先取出背包里的物品，\n否则你可能会失去里面的所有物品！",
+                    "$layout_item_button": "bp_iron",
+                    "$crafting_bp_num": "3",
+                    "$is_backpack_item": true
+                }
+            },
+            {
+                "bp_3@pause.hover_item_crafting": {
+                    "$hover_text_item": "钻石背包\n§c小心！\n在合成更高级背包之前，\n你必须先取出背包里的物品，\n否则你可能会失去里面的所有物品！",
+                    "$layout_item_button": "bp_diamond",
+                    "$crafting_bp_num": "5",
+                    "$is_backpack_item": true
+                }
+            },
+            {
+                "bp_4@pause.hover_item_crafting": {
+                    "$hover_text_item": "下界合金背包\n§c小心！\n在合成更高级背包之前，\n你必须先取出背包里的物品，\n否则你可能会失去里面的所有物品！",
+                    "$layout_item_button": "bp_nether",
+                    "$crafting_bp_num": "6",
+                    "$is_backpack_item": true
+                }
+            },
+            {
+                "adit_1@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件",
+                    "$layout_item_button": "i_1",
+                    "$crafting_bp_num": "1",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_1444444@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9液体容器",
+                    "$layout_item_button": "i_15",
+                    "$crafting_bp_num": "16",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_2@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9水下呼吸",
+                    "$layout_item_button": "i_2",
+                    "$crafting_bp_num": "2",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_3@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9自动转换工具",
+                    "$layout_item_button": "i_3",
+                    "$crafting_bp_num": "3",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_4@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9移动光源",
+                    "$layout_item_button": "i_4",
+                    "$crafting_bp_num": "4",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_5@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9挖矿速度加成",
+                    "$layout_item_button": "i_5",
+                    "$crafting_bp_num": "5",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_6@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9掉落物磁吸",
+                    "$layout_item_button": "i_6",
+                    "$crafting_bp_num": "6",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_7@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9物品磁吸 v2",
+                    "$layout_item_button": "i_7",
+                    "$crafting_bp_num": "7",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_8@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9连锁砍树",
+                    "$layout_item_button": "i_8",
+                    "$crafting_bp_num": "8",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_9@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9便携式耕种",
+                    "$layout_item_button": "i_9",
+                    "$crafting_bp_num": "9",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_10@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9自动进食",
+                    "$layout_item_button": "i_10",
+                    "$crafting_bp_num": "10",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_11@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9便携式熔炉炉",
+                    "$layout_item_button": "i_11",
+                    "$crafting_bp_num": "11",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_12@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9便携式熔炉 v2",
+                    "$layout_item_button": "i_12",
+                    "$crafting_bp_num": "12",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_13@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9额外的生命回复",
+                    "$layout_item_button": "i_13",
+                    "$crafting_bp_num": "13",
+                    "$is_aditament_item": true
+                }
+            },
+            {
+                "adit_14@pause.hover_item_crafting": {
+                    "$hover_text_item": "精妙背包插件\n§r§7特殊功能: §9便携式唱片机",
+                    "$layout_item_button": "i_14",
+                    "$crafting_bp_num": "14",
+                    "$is_aditament_item": true
+                }
+            }
+        ]
+    },
+    "default_image_crafteos": {
+        "type": "image",
+        "texture": "textures/ui/crafters/default",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 1
+    }
+}
