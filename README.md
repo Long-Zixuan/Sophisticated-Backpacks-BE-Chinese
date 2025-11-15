@@ -15,4 +15,4 @@ PC：
 ### 打包
 打包时请删除README.md和git文件夹，将BE和RE压缩进一个zip格式的压缩包后，将后缀名改为mcaddon即可
 ![](https://assets-mod.3dmgame.com/static/upload/mod/202511/MOD69155b527904a.png)
-![](https://assets-mod.3dmgame.com/static/upload/mod/202511/MOD69155b6283590.png)
+![](https://assets-mod.3dmgame.com/static/upload/mod/202511/MOD691741e1c9442.jpg)
