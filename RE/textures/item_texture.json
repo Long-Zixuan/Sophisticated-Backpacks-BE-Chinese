@@ -82,6 +82,9 @@
         "music_disc": {
             "textures": "textures/items/disc_backpack"
         },
+        "music_disc_loongly": {
+            "textures": "textures/items/disc_backpack_loongly"
+        },
         "complement_music": {
             "textures": "textures/items/music_complement"
         }

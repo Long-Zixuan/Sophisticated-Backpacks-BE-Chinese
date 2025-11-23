@@ -49,6 +49,16 @@
           "type": "item",
           "name": "music:h",
           "weight": 1
+        },
+        {
+            "type": "item",
+            "name": "music:lain",
+            "weight": 1
+        },
+        {
+            "type": "item",
+            "name": "music:badapple",
+            "weight": 1
         }
       ]
     },

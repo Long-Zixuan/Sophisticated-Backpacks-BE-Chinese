@@ -56,6 +56,20 @@
          "sounds" : [
             "sounds/music_backpack/music_8"
          ]
+      },
+      "music:lain" : {
+         "category" : "ui",
+         "load_on_low_memory": true,
+         "sounds" : [
+            "sounds/music_backpack/music_lain"
+         ]
+      },
+      "music:badapple" : {
+         "category" : "ui",
+         "load_on_low_memory": true,
+         "sounds" : [
+            "sounds/music_backpack/music_badapple"
+         ]
       }
    }
 }
