@@ -13,6 +13,15 @@ PC：
 手机：
 下载后解压，使用我的世界打开mcaddon文件即可安装
 ### 打包
+
+```
+python ./build.py
+```
+
+#### 没安装python？
+
+按照以下方法打包
+
 打包时请删除README.md和git文件夹，将BE和RE压缩进一个zip格式的压缩包后，将后缀名改为mcaddon即可
 ![](https://assets-mod.3dmgame.com/static/upload/mod/202511/MOD69155b527904a.png)
 ![](https://assets-mod.3dmgame.com/static/upload/mod/202511/MOD691741e1c9442.jpg)
