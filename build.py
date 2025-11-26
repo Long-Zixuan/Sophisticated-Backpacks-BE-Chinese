@@ -16,7 +16,7 @@ def zip_folder(folder_path, zip_path):
         zipdir(folder_path, zipObj)
 
 def write_lang_file(path,txt):
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(txt)
 	   
 VERSION = "0.5.2"
