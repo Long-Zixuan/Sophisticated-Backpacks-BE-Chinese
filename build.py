@@ -20,7 +20,7 @@ def write_lang_file(path,txt):
         f.write(txt)
 	   
 VERSION = "0.5.2"
-CHINESE_VERSION = "3.0"
+CHINESE_VERSION = "4.0"
 MOD_NAME = "精妙背包"
 FINAL_NAME = MOD_NAME + " v"+VERSION+"."+CHINESE_VERSION+".mcaddon"
 
